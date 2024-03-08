@@ -36,8 +36,20 @@
 .heroImg {
     height: 400px;
     width: 400px;
+    z-index: 1; 
+}
 
-    z-index: 1;
- 
+@media screen and (max-width:830px) {
+    .heroImg{
+        height: 275px;
+        width: 275px;
+    }
+    .container{
+        flex-direction: column-reverse;
+    }
+    .content {
+        align-items: center;
+    }
+    
 }
 
