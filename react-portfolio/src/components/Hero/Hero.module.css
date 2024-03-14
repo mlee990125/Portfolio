@@ -34,8 +34,8 @@
 }
 
 .heroImg {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     z-index: 1; 
 }
 
@@ -49,13 +49,38 @@
 
 .techstack {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 80px;
     margin-left: 20%;
-    margin-right: 20%;
+    margin-right: 10%;
     font-family: var(--font-roboto);
     font-size: 20px;
     font-weight: 900;
 }
+
+.stackIcon {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
 
 @media screen and (max-width:830px) {
     .heroImg{
