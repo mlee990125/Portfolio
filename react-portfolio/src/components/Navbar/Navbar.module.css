@@ -1,7 +1,7 @@
 @import '../../vars.css';
 
 .navbar {
-    background-color: white;
+    background-color: black;
     position: relative;
     display: flex;
     align-items: center;
@@ -25,9 +25,17 @@
 
 .menuItems a {
     font-size: 20px;
-    color: var(--color-text);
+    color: white;
     text-decoration: none;
+    transition: all 300ms ease;
 }
+
+.menuItems a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+  }
 
 @media screen and (max-width: 830px){
     .navbar {
