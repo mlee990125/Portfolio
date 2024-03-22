@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 // import React from 'react';
-// import styles from "./Hero.module.css";
+import styles from "./Projects.module.css";
 
 const Project = ({ title, picture, description, githubLink }) => (
-  <div className="details-container color-container">
-    <div className="article-container">
-      <img src={picture} alt={title} className="project-img" />
+  <div className={`${styles.details_container} ${styles.color_container}`}>
+    <div className={styles.article_container}>
+      <img src={picture} alt={title} className={styles.project_img} />
     </div>
-    <h2 className="experience-sub-title project-title">{title}</h2>
+    <h2 className={`${styles.experience_sub_title} ${styles.project_title}`}>{title}</h2>
     <p>{description}</p>
-    <div className="btn-container">
+    <div className={styles.btn_container}>
       <button
-        className="btn btn-color-2 project-btn"
+        className={`${styles.btn} ${styles.btn_color_2} ${styles.project_btn}`}
         onClick={() => (window.location.href = githubLink)}
       >
         Github
@@ -38,11 +38,11 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects">
-      <p className="section__text__p1">Browse My Recent</p>
-      <h1 className="title">Projects</h1>
-      <div className="experience-details-container">
-        <div className="about-containers">
+    <section className={styles.projects} id="projects">
+      <p className={styles.section__text__p1}>Browse My Recent</p>
+      <h1 className={styles.title}>Projects</h1>
+      <div className={styles.experience_details_container}>
+        <div className={styles.about_containers}>
           {projects.map((project, index) => (
             <Project key={index} {...project} />
           ))}
