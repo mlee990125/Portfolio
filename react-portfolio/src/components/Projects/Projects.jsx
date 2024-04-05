@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import React from 'react';
+import { getImageUrl } from "../../utils";
 import styles from "./Projects.module.css";
 
 const Project = ({ title, picture, description, githubLink }) => (
@@ -8,7 +9,7 @@ const Project = ({ title, picture, description, githubLink }) => (
       <img src={picture} alt={title} className={styles.project_img} />
     </div>
     <h2 className={`${styles.experience_sub_title} ${styles.project_title}`}>{title}</h2>
-    <p>{description}</p>
+    <p className={styles.description}>{description}</p>
     <div className={styles.btn_container}>
       <button
         className={`${styles.btn} ${styles.btn_color_2} ${styles.project_btn}`}
@@ -23,13 +24,37 @@ const Project = ({ title, picture, description, githubLink }) => (
 const projects = [
   {
     title: "Project One",
-    picture: "./assets/project-1.png",
+    picture: getImageUrl('projects/project.png'),
     description: "This is the first project description.",
     githubLink: "https://github.com/project1",
   },
   {
     title: "Project Two",
-    picture: "./assets/project-2.png",
+    picture: getImageUrl('projects/project2.png'),
+    description: "This is the second project description.",
+    githubLink: "https://github.com/project2",
+  },
+  {
+    title: "Project One",
+    picture: getImageUrl('projects/project.png'),
+    description: "This is the first project description.",
+    githubLink: "https://github.com/project1",
+  },
+  {
+    title: "Project Two",
+    picture: getImageUrl('projects/project2.png'),
+    description: "This is the second project description.",
+    githubLink: "https://github.com/project2",
+  },
+  {
+    title: "Project One",
+    picture: getImageUrl('projects/project.png'),
+    description: "This is the first project description.",
+    githubLink: "https://github.com/project1",
+  },
+  {
+    title: "Project Two",
+    picture: getImageUrl('projects/project2.png'),
     description: "This is the second project description.",
     githubLink: "https://github.com/project2",
   },

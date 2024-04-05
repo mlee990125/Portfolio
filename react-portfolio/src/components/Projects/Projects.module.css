@@ -1,13 +1,21 @@
 @import "../../vars.css";
 
-#projects {
+.projects {
+  /* height: 100vh; */
   position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 95px;
+  margin-top: 119px;
+  z-index: 1;
 }
 
 .about_containers {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 
 .article_container {
@@ -46,11 +54,17 @@
 .details_container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: black;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  min-width: 50vh;
+}
+
+.description{
+  color: white;
+  padding: 10px;
 }
 
 .experience_details_container {
@@ -75,7 +89,7 @@
 
 .project_title {
   margin: 1rem;
-  color: black;
+  color: white;
 }
 
 .project_btn {

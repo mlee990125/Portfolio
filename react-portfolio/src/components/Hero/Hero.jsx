@@ -23,7 +23,7 @@ export const Hero = () => {
               I'm a full-stack developer blah blah blah more lines more lines
               more lines 
             </p>
-            <div style={{color: 'white'}}>Testing</div>
+            {/* <div style={{color: 'white'}}>Testing</div> */}
           </div>
 
           <div className={styles.socials_container}>
